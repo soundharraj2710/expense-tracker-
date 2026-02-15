@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  
+  <div class="logo">
+    <img src="./unnamed.png" alt="Logo">
+    <h1>Expense Tracker</h1>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <button onclick="logout()">Logout</button>
+</nav>
+
+<!-- DASHBOARD -->
+<section class="dashboard">
+  <div class="card income">Income ₹<span id="income">0</span></div>
+  <div class="card expense">Expense ₹<span  id="expense">0</span></div>
+  <div class="card balance">Balance ₹<span id="balance">0</span></div>
+</section>
+
+<!-- ADD TRANSACTION -->
+<section class="form-section">
+  <h3>Add Transaction</h3>
+
+  <input type="number" id="amount" placeholder="Amount">
+  <select id="type">
+    <option value="income">Income</option>
+    <option value="expense">Expense</option>
+  </select>
+
+  <select id="category">
+    <option>Food</option>
+    <option>Travel</option>
+    <option>Bills</option>
+    <option>Shopping</option>
+  </select>
+
+  <button onclick="addTransaction()">Add</button>
+</section>
+
+<!-- TRANSACTION LIST -->
+<section class="list">
+  <h3>Transactions</h3>
+  <ul id="transactionList"></ul>
+</section>
+
+<!-- CHART -->
+<section class="chart">
+  <canvas id="expenseChart" width="300" height="300"></canvas>
+</section>
+
+<footer>
+  © 2026 Expense Tracker
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
